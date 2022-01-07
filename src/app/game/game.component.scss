@@ -1,0 +1,38 @@
+.main-container h1 {
+    font-weight: 900;
+    text-align: center;
+    margin: 15px 0;
+    color: #fff;
+}
+
+.main-container p:first-child {
+    color: #fff;
+}
+
+.main-container {
+    .gameboard {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .playerone {
+            p {
+                color: rgb(83, 163, 83);
+            }
+        }
+        .playertwo {
+            p {
+                color: rgb(230, 109, 109);
+            }
+        }
+        .gamefield {
+            width: 300px;
+            .subfield {
+                cursor: pointer;
+                height: 100px;
+                width: 100px;
+                border: 1px solid #fff;
+            }
+        }
+    }
+}

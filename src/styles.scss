@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/scss/bootstrap";
+html,
+body {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: #485563;
+    background: -webkit-linear-gradient(to right, #29323c, #485563);
+    background: linear-gradient(to right, #29323c, #485563);
+}
