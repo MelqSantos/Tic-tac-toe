@@ -17,34 +17,69 @@
     </div>
 
     <!-- Início do game -->
-    <div class="gameboard">
+    <div class="gameboard container">
 
-        <div class="players playerone align-self-center">
-            <p class="mat-body-1" style="font-weight: 700; margin: 0 0 10px 20px;">Jogador 1</p>
-        </div>
-
-        <div class="gamefield container-fluid">
+        <div class="gamefield">
             <div class="row">
-                <div (click)="clickSubfield($event)" position="0" class="subfield col-4"></div>
-                <div (click)="clickSubfield($event)" position="1" class="subfield col-4"></div>
-                <div (click)="clickSubfield($event)" position="2" class="subfield col-4"></div>
+                <div id="one" (click)="clickSubfield($event)" position="0" class="subfield col-4"></div>
+                <div id="two" (click)="clickSubfield($event)" position="1" class="subfield col-4"></div>
+                <div id="three" (click)="clickSubfield($event)" position="2" class="subfield col-4"></div>
             </div>
             <div class="row">
-                <div (click)="clickSubfield($event)" position="3" class="subfield col-4"></div>
-                <div (click)="clickSubfield($event)" position="4" class="subfield col-4"></div>
-                <div (click)="clickSubfield($event)" position="5" class="subfield col-4"></div>
+                <div id="four" (click)="clickSubfield($event)" position="3" class="subfield col-4"></div>
+                <div id="five" (click)="clickSubfield($event)" position="4" class="subfield col-4"></div>
+                <div id="six" (click)="clickSubfield($event)" position="5" class="subfield col-4"></div>
             </div>
             <div class="row">
-                <div (click)="clickSubfield($event)" position="6" class="subfield col-4"></div>
-                <div (click)="clickSubfield($event)" position="7" class="subfield col-4"></div>
-                <div (click)="clickSubfield($event)" position="8" class="subfield col-4"></div>
+                <div id="seven" (click)="clickSubfield($event)" position="6" class="subfield col-4"></div>
+                <div id="eight" (click)="clickSubfield($event)" position="7" class="subfield col-4"></div>
+                <div id="nine" (click)="clickSubfield($event)" position="8" class="subfield col-4"></div>
             </div>
         </div>
 
-        <div class="players playertwo align-self-center">
-            <p class="mat-body-1" style="font-weight: 700; margin: 0 20px 10px 0;">Jogador 2</p>
+        <div class="players">
+            <div class="scorecard">
+                <div class="row">
+                    <div class="col-12 playerInfo">
+                        <div>
+                            <span>#1</span>
+                            <img src="/assets/img/circle.png" alt="Joystick" width="30" height="30">
+                        </div>
+                        <p>Jogador 1</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <ul>
+                            <li>0 jogos</li>
+                            <li>0 vitórias</li>
+                            <li>0 derrotas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scorecard">
+                <div class="row">
+                    <div class="col-12 playerInfo">
+                        <div>
+                            <span>#2</span>
+                            <img src="/assets/img/plus.png" alt="Joystick" width="30" height="30" style="transform: rotate(45deg);">
+                        </div>
+                        <p>Jogador 2</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <ul>
+                            <li>0 jogos</li>
+                            <li>0 vitórias</li>
+                            <li>0 derrotas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- Fim do game -->
+
     </div>
-    <!-- Fim do game -->
-
-</div>

@@ -14,8 +14,39 @@
     .gameboard {
         margin-top: 30px;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        align-items: center !important;
+        justify-content: space-evenly !important;
+        .players {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            color: #fff;
+            .scorecard {
+                border: solid 1px #fff;
+                border-radius: 15px;
+                margin-top: 10px;
+            }
+            .playerInfo {
+                display: flex;
+                align-items: center !important;
+                padding-top: 10px;
+                div {
+                    width: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .col-12 ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-evenly;
+                padding-top: 10px;
+            }
+        }
         .playerone {
             p {
                 color: rgb(83, 163, 83);
@@ -28,11 +59,28 @@
         }
         .gamefield {
             width: 300px;
+            #one,
+            #two,
+            #four,
+            #five {
+                border-right: solid 4px #fff;
+                border-bottom: solid 4px #fff;
+            }
+            #three,
+            #six {
+                border-bottom: solid 4px #fff;
+            }
+            #seven,
+            #eight {
+                border-right: solid 4px #fff;
+            }
             .subfield {
                 cursor: pointer;
                 height: 100px;
                 width: 100px;
-                border: 1px solid #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 &.player-one {
                     background: rgb(83, 163, 83);
                 }

@@ -18,6 +18,7 @@ export class GameComponent implements OnInit {
   startGame(): void {
     // Inicializa o game com os campos em branco.
     this.game.gameStart();
+    
     // Avisa de quem é a vez de jogar.
     const currentPlayer = 'Vez do : Jogador ' + this.game.currentTurn;
     const information: HTMLElement = document.querySelector('.current-status') as HTMLElement;
@@ -31,7 +32,7 @@ export class GameComponent implements OnInit {
     information.innerHTML = 'Convide alguém para jogar com você...';
   }
 
-  // Pega a posição do campo clicado pelo jogador e adiciona a cor correspondente (classe).
+  // Pega a posição do campo clicado pelo jogador e adiciona a cor e imagem correspondente.
   async clickSubfield(subfield: any): Promise<void> {
 
     if (this.game.gameStatus === 1) {
@@ -40,6 +41,22 @@ export class GameComponent implements OnInit {
       this.game.setField(position, this.game.currentTurn);
       const color = this.game.getPlayerColorClass();
       subfield.currentTarget.classList.add(color);
+
+      // Adiciona as imagens nos campos (Cruz e círculo)
+      let img = document.createElement('img');
+      let vazio = subfield.currentTarget.children.length;
+      img.style.width = '100%';
+
+      if(this.game.currentTurn === 1 && vazio == 0){
+        img.setAttribute('src', '/assets/img/plus.png');  
+        img.style.transform = "rotate(45deg)";
+        img.style.filter = 'brightness(0.5)';
+        subfield.currentTarget.appendChild(img);
+      } else if(this.game.currentTurn === 2 && vazio == 0){
+        img.setAttribute('src', '/assets/img/circle.png'); 
+        subfield.currentTarget.appendChild(img);
+      }
+      
 
       // Função para determinar o ganhador do jogo.
       await this.game.checkGameEndWinner().then( (end: boolean) => {

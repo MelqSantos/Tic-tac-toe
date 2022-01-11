@@ -17,7 +17,7 @@ export class Gamelogic {
         [0, 1, 0, 0, 1, 0, 0, 1, 0 ], // 2° coluna vertical
         [0, 0, 1, 0, 0, 1, 0, 0, 1 ], // 3° coluna vertical
         [1, 0, 0, 0, 1, 0, 0, 0, 1 ], // Diagonal esquerda para direita
-        [0, 0, 1, 0, 1, 0, 1, 0, 0 ], // Diagonal direita para esquerda 
+        [0, 0, 1, 0, 1, 0, 1, 0, 0 ]  // Diagonal direita para esquerda 
     ];
 
     winSituationsTwo: Array<Array<number>> = [
@@ -28,7 +28,7 @@ export class Gamelogic {
         [0, 2, 0, 0, 2, 0, 0, 2, 0 ], // 2° coluna vertical
         [0, 0, 2, 0, 0, 2, 0, 0, 2 ], // 3° coluna vertical
         [2, 0, 0, 0, 2, 0, 0, 0, 2 ], // Diagonal esquerda para direita
-        [0, 0, 2, 0, 2, 0, 2, 0, 0 ], // Diagonal direita para esquerda 
+        [0, 0, 2, 0, 2, 0, 2, 0, 0 ]  // Diagonal direita para esquerda 
     ];
     
 
